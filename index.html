@@ -10,6 +10,8 @@
     <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,300,400,600,700,800"
 	  rel="stylesheet" type="text/css">
+    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
+    <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
     <style type="text/css">
 
       /* large desktop */
@@ -57,9 +59,7 @@
       font-size: 18px;
       line-height: 24px;
       }
-      .navigation, .section1, .section2, .faq, .footer {
-      padding: 10px 0px 10px 0px;
-      }
+
       .pitch{
       padding: 2.5% 0%;
       }
@@ -73,19 +73,28 @@
       .video, .thermometer, .order, .statistics, .social {
       text-align: center;
       }
-      .video {
-      height: 124px;
-      line-height: 124px;
-      }
       .statistics h3, .statistics p{
       color: white;
       }
-      .thermometer, .order, .social {
-      height: 40px;
-      line-height: 40px;
+
+      /* Marketing Copy and Footer */
+      .copy{
+      padding-top: 2.5%;
+      padding-bottom: 2.5%;
+      text-align: justify;
       }
-      div.row {
-      border: 1px solid;
+      .asset{
+      padding: 2.5% 0%;
+      }
+      .footer {
+      color: #cccccc;
+      text-align: center;
+      }
+      .footer p{
+      font-size: 11px;
+      }
+      .footer a{
+      color: #ccccff;
       }
     </style>
   </head>
@@ -115,10 +124,10 @@
     <div class="container">
       <div class="row-fluid heading">
 	<div class="span12">
-	  <h1> Product </h1>
+	  <h1>Product</h1>
 	</div>
       </div>
-      <div class="row-fuild subheading">
+      <div class="row-fluid subheading">
 	<div class="span12">
 	  <p class="lead">One sentence description.</p>
 	</div>
@@ -127,7 +136,7 @@
 	<div class="span5 offset1 video">
 	  <img class="img-polaroid" src="http://placehold.it/480x300">
 	</div>
-
+	
 	<div class="span5 actions">
 	  <div class="span8 offset2">
 	    <div class="statistics">
@@ -163,48 +172,74 @@
 	  </div>
 	</div>
       </div>
-      <div class="row subheading">
-	<div class="span12">
-	  <p class="lead">This is my first bitstarter project.</p>
+    
+      <div class="row-fluid section1">
+	<div class="span5 offset1 asset">
+	  <img class="img-polaroid" src="http://placehold.it/480x300">
+	</div>
+	<div class="span5 copy">
+	  <p>
+	    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	  </p>
+	</div>	     
+      </div>
+    
+      <div class="row-fluid section2">
+	<div class="span5 offset1 copy copy-right">
+	  <p>
+	    	    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	  </p>
+	</div>
+	<div class="span5 asset">
+	  <img class="img-polaroid" src="http://placehold.it/480x300">
 	</div>
       </div>
-      <div class="row pitch">
-	<div class="span6 video">
-	  Video
-	</div>
-	<div class="span6">
-	  <div class="thermometer">
-	    Thermometer
+      
+      <!-- for the FAQ, we use JS -->
+      <div class="row-fluid faq">
+	<div class="span10 offset1">
+	  <h3> FAQ </h3>
+	  <div class="accordion" id="accordion2">
+	    <div class="accordion-group">
+	      <div class="accordion-heading">
+		<a class="accordion-toggle" data-toggle="collapse"
+		   data-parent="#accordion2" href="#collapseOne">
+		  What does FAQ stands for?
+		</a>
+	      </div>
+	      <div id="collapseOne" class="accordion-body collapse">
+		<div class="accordion-inner">
+		  Frequently Asked Questions.
+		</div>
+	      </div>
+	    </div>
+	    <div class="accordion-group">
+	      <div class="accordion-heading">
+		<a class="accordion-toggle" data-toggle="collapse"
+		   data-parent="#accordion2" href="#collapseTwo">
+		  What's a Frequently Asked Questions?
+		</a>
+	      </div>
+	      <div id="collapseTwo" class="accordion-body collapse">
+		<div class="accordion-inner">
+		  A question which is commonly asked by users.
+		</div>
+	      </div>
+	    </div>
 	  </div>
-	  <div class="order">
-	    Order
-	  </div>
-	  <div class="social">
-	    Social
-	  </div>
 	</div>
       </div>
-      <div class="row section1">
+
+      <div class="row-fluid footer">
 	<div class="span12">
-	  Marketing Section 1
-	</div>
-      </div>
-      <div class="row section2">
-	<div class="span12">
-	  Marketing Section 2
-	</div>
-      </div>
-      <div class="row faq">
-	<div class="span12">
-	  FAQ
-	</div>
-      </div>
-      <div class="row footer">
-	<div class="span12">
-	  Footer
+	  <p>This work is licensed under
+	    the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC
+	      By-SA 3.0
+	    </a>, without all of the cruft that would otherwise be
+	    put at the bottom of the page. </p>
 	</div>
       </div>
     </div>
-</body>
+  </body>
 </html>
 
